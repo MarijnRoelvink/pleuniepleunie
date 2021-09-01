@@ -21,7 +21,7 @@
 		width: 200px;
 		height: 100px;
 		background-color: #2bb198;
-		margin: 5px 2px;
+		margin: 2px 2px;
 		text-align: center;
 		padding: 30px;
 		cursor: pointer;
@@ -41,9 +41,9 @@
 	}
 
 	.top-container {
+		max-width: 820px;
 		width: 80%;
-		margin-left: 20%;
-		margin-right: 20%;
+		margin: 0 auto;
 	}
 
 </style>
@@ -63,7 +63,19 @@
 		}, {
 			name: "Merp",
 			file: "merp"
-		}];
+		},
+			{
+				name: "Steek de hele stad..",
+				file: "fik"
+			},
+			{
+				name: "Bingoclub",
+				file: "grappenmaker"
+			},
+			{
+				name: "Broodje sate",
+				file: "sate"
+			}];
 		sounds.forEach(el => {
 			$(".button-container").append("<div class=\"button\" onclick=\"playSound('"+ el.file +"')\">" +
 				el.name +
