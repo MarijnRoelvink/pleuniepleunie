@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pleunie's soundboard</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+	      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+	body {
+		background-color: black;
+		color: white;
+	}
+
+	.green-bg {
+		background-color: #2bb198;
+	}
+
+	.button {
+		width: 200px;
+		height: 100px;
+		background-color: #2bb198;
+		margin: 5px 2px;
+		text-align: center;
+		padding: 30px;
+		cursor: pointer;
+	}
+
+	.button:hover {
+		background-color: #2a9980;
+	}
+
+	.button-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.button-container, h1 {
+		margin-top: 50px;
+	}
+
+	.top-container {
+		width: 80%;
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+
+</style>
+<body>
+<div class="top-container">
+	<h1>Pleunie's soundboard</h1>
+	<div class="col-12 button-container">
+	</div>
+</div>
+</body>
+<script>
+
+	function init() {
+		let sounds = [{
+			name: "Jongens jongens jongens!",
+			file: "jongens"
+		}, {
+			name: "Merp",
+			file: "merp"
+		}];
+		sounds.forEach(el => {
+			$(".button-container").append("<div class=\"button\" onclick=\"playSound('"+ el.file +"')\">" +
+				el.name +
+				"<audio id=\""+ el.file +"\" src=\"sounds/"+ el.file +".wav\"></audio>" +
+				"</div>");
+		});
+	}
+
+	function playSound(id) {
+		console.log("check");
+		document.getElementById(id).play();
+	}
+
+	init();
+</script>
+</html>
