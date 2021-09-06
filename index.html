@@ -57,13 +57,38 @@
 <script>
 
 	function init() {
-		let sounds = [{
-			name: "Jongens jongens jongens!",
-			file: "jongens"
-		}, {
-			name: "Merp",
-			file: "merp"
-		},
+		let sounds = [
+			{
+				name: "Weh",
+				file: "weh"
+			}, {
+				name: "Echt grappig",
+				file: "grappig"
+			}, {
+				name: "Voor mensen met..",
+				file: "nietgemaakt"
+			}, {
+				name: "Tweede poging",
+				file: "poging"
+			}, {
+				name: "Kut!",
+				file: "kut"
+			}, {
+				name: "Gefeliciteerd",
+				file: "gefeliciteerd"
+			}, {
+				name: "Telefoon is stuk",
+				file: "telefoon"
+			}, {
+				name: "Mijn leven..",
+				file: "haatleven"
+			}, {
+				name: "Jongens jongens jongens!",
+				file: "jongens"
+			}, {
+				name: "Merp",
+				file: "merp"
+			},
 			{
 				name: "Steek de hele stad..",
 				file: "fik"
@@ -77,9 +102,9 @@
 				file: "sate"
 			}];
 		sounds.forEach(el => {
-			$(".button-container").append("<div class=\"button\" onclick=\"playSound('"+ el.file +"')\">" +
+			$(".button-container").append("<div class=\"button\" onclick=\"playSound('" + el.file + "')\">" +
 				el.name +
-				"<audio id=\""+ el.file +"\" src=\"sounds/"+ el.file +".wav\"></audio>" +
+				"<audio id=\"" + el.file + "\" src=\"sounds/" + el.file + ".wav\"></audio>" +
 				"</div>");
 		});
 	}
